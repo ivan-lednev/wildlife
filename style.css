@@ -1,0 +1,331 @@
+:root {
+    --orange: #cd6326;
+    --black: #333333;
+    --grey: #666666;
+    --light-grey: #cccccc;
+    --white: #f7f7f7;
+}
+
+body {
+    color: var(--white);
+    font-family: "Open Sans", sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+a,
+button,
+.article-arrow,
+input[type="button"] {
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 40px;
+    width: 40px;
+    background-image: url("assets/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-content {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.vertical-sizer {
+    overflow: auto; /* See https://stackoverflow.com/questions/8529695/adjusting-the-margin-top-of-a-div-inside-of-a-container-div-pushes-both-the-inne/8529773 */
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.hero-background-colorer {
+    background-color: #02160b;
+}
+
+.main-background-colorer {
+    background-color: var(--light-grey);
+}
+
+.footer-background-colorer {
+    background-color: #181617;
+}
+
+.hero-page {
+    background-image: url("assets/Rectangle.png");
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    height: 780px;
+}
+
+/* Header */
+
+header {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+}
+
+.search-section-container {
+    flex-basis: 40%;
+    display: flex;
+    align-items: inherit;
+    flex-direction: row;
+    justify-content: inherit;
+}
+
+.logo {
+    font-size: 32px;
+    font-family: Roboto, sans-serif;
+    margin-left: 15px;
+}
+
+.sign-in {
+    border: 2px solid var(--orange);
+    border-radius: 2px;
+    background-color: transparent;
+    /* todo: remove */
+    color: var(--white);
+    font-size: inherit;
+    width: 120px;
+    height: 50px;
+}
+
+.sign-in:hover {
+    background-color: var(--orange);
+}
+
+/* Survival */
+
+.survival-container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 274px;
+    text-shadow: black 1px;
+}
+
+.survival-container > * {
+    margin-top: 50px;
+}
+
+.survival-container .survival-text {
+    text-shadow: 1px 1px 0px var(--black);
+}
+
+.survival-container h1 {
+    font-size: 48px;
+    font-weight: 400;
+    color: #cd6326;
+    letter-spacing: 0.04em;
+}
+
+.survival-container button,
+input[type="button"] {
+    padding: 16px 0;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    color: var(--white);
+}
+
+#donate:hover,
+input[type="button"]:hover {
+    background-color: #e39128;
+}
+
+#donate:focus,
+.sign-in:focus,
+input[type="button"]:focus {
+    background-color: #8f5613;
+}
+
+.survival-container button {
+    width: 160px;
+}
+
+input[type="button"] {
+    width: 120px;
+}
+
+/* Main */
+
+.main-page {
+    background-color: var(--light-grey);
+    color: var(--black);
+    /* todo */
+    height: 1368px;
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-page h2 {
+    margin-top: 120px;
+    font-size: 48px;
+}
+
+.sh-2-subheader {
+    color: var(--grey);
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 120px;
+}
+
+.text-small {
+    /* todo out of place? */
+    size: 17px;
+}
+
+.article-container {
+    display: flex;
+    color: var(--white);
+    margin-left: 2px;
+}
+
+.article-container > * {
+    margin: 0 30px;
+}
+
+.article-tile {
+    height: 360px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.tile-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    bottom: 42px;
+}
+
+.tile-caption h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    line-height: 36px;
+}
+
+.tile-caption p {
+    font-size: 17px;
+}
+
+.subscribe-container {
+    margin: 240px auto;
+}
+
+.subscribe-container h3 {
+    font-size: 27px;
+    text-align: center;
+}
+
+.email-form {
+    display: flex;
+    width: 660px;
+    margin-top: 60px;
+}
+
+.article-arrow:hover,
+.round-logo:hover,
+.search-icon:hover {
+    transform: scale(0.8);
+    transition: 500ms;
+}
+
+input[type="text"] {
+    background-color: inherit;
+    border: 1px solid var(--grey);
+    border-radius: 2px;
+    /* todo duplicated? */
+    font-size: 23px;
+    padding: 0 15px;
+    line-height: 60px;
+    flex-grow: 1;
+}
+
+footer {
+    background-image: url("assets/Footer.jpg");
+    background-size: cover;
+    /* todo */
+    height: 360px;
+}
+
+.footer-container {
+    display: flex;
+    /* todo: use the sizer */
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 0;
+}
+
+.logo-container,
+.footer-link-container,
+.footer-social-media-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+}
+
+.footer-link-container {
+    flex-basis: 476px;
+    margin-left: 13px;
+    /* todo repeated? */
+    font-size: 23px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-media-container {
+    width: 240px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-social-media-container li {
+    display: flex;
+}
+
+.round-logo {
+    height: 40px;
+    width: 40px;
+}
+
+.facebook-logo {
+    background-image: url("assets/facebook-logo.svg");
+}
+
+.instagram-logo {
+    background-image: url("assets/instagram-logo.svg");
+}
+
+.pinterest-logo {
+    background-image: url("assets/pinterest-logo.svg");
+}
+
+.telegram-logo {
+    background-image: url("assets/telegram-logo.svg");
+}
